@@ -1,0 +1,39 @@
+<body>
+  <div id="root"></div>
+</body>
+
+<script>
+  const root = document.getElementById('root')
+
+function elementMaker (tagName, props, ...children) {
+    
+    const element = document.createElement(tagName);
+
+    Object.keys(props).forEach(function(key) {
+
+      element[key] = props[key];
+
+  });
+
+if (children.length > 0) {
+
+  children.forEach(function(child) {
+
+    if (typeof (child) === "string") {
+
+    }
+      child = document.createTextNode(child);
+      element.appendChild(child);
+    });
+  }
+return element;
+}
+const items = ['item1', 'item2', 'item3'];
+const copy = [];
+
+items.forEach(function(item){
+  copy.push(item);
+})
+  console.log(copy)
+
+</script>

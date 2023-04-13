@@ -1,0 +1,95 @@
+<body>
+  <div id="root"></div>
+</body>
+
+ <script>
+  
+ let root = document.getElementById('root')
+  /* 
+  const xhr = new XMLHttpRequest();
+  
+  const _URL = 'https://pokeapi.co/api/v2/pokemon/dit'
+  xhr.open ('GET', _URL)
+  xhr.send() 
+  xhr.addEventListener('load', () => {
+    console.log(xhr.response)
+    const _pokeData = JSON.parse(xhr.response)
+    const h1 = document.createElement('h1')
+    h1.textContent = _pokeData.name;
+    root.appendChild(h1)
+  
+  })
+   */
+ /*   let ele = document.createElement('div')
+  root.appendChild(ele)
+
+  let num =  Math.floor(Math.random () * 1233)
+
+
+  let me = `https://pokeapi.co/api/v2/pokemon/${num}.png/`
+// `https://pokeapi.co/api/v2/pokemon/${num}.png/`
+  ele.innerHTML = me
+ */
+
+/* const xhr = new XMLHttpRequest();
+let num =  Math.floor(Math.random () * 1233)
+
+const _URL = 'https://pokeapi.co/api/v2/pokemon/${num}'
+xhr.open ('GET', _URL)
+xhr.send() 
+xhr.addEventListener('load', () => {
+  console.log(xhr.response)
+  const _pokeData = JSON.parse(xhr.response)
+  const h1 = document.createElement('h1')
+  h1.textContent = _pokeData.name;
+  root.appendChild(h1)
+
+})
+ */
+
+/* 
+  const xhr = new XMLHttpRequest();
+  const _URL = 'https://pokeapi.co/api/v2/pokemon/ditto'
+  xhr.open ('GET', _URL)
+  xhr.send() 
+  xhr.addEventListener('load', () => {
+    console.log(xhr.response)
+    const _pokeData = JSON.parse(xhr.response)
+    console.dir(_pokeData)
+    const h1 = document.createElement('h1')
+    h1.textContent = _pokeData.name;
+    root.appendChild(h1)
+
+    const img = document.createElement('img')
+    
+    root.appendChild(img)
+    img.src = _pokeData.sprites.front_default;
+    //console.dir(a)
+    img.appendChild(a)
+  })
+ */
+
+
+
+ const xhr = new XMLHttpRequest();
+ let num = Math.floor(Math.random () *1233 )
+  const _URL = `https://pokeapi.co/api/v2/pokemon/${num}/`
+  xhr.open ('GET', _URL)
+  xhr.send() 
+  xhr.addEventListener('load', () => {
+    console.log(xhr.response)
+    const _pokeData = JSON.parse(xhr.response)
+    console.dir(_pokeData)
+    const h1 = document.createElement('h1')
+    h1.textContent = _pokeData.name;
+    root.appendChild(h1)
+
+    const img = document.createElement('img')
+    
+    root.appendChild(img)
+    img.src = _pokeData.sprites.front_default;
+    //console.dir(a)
+    img.appendChild(a)
+  })
+
+</script>

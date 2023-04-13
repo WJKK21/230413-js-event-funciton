@@ -1,0 +1,40 @@
+<body>
+  <button id="plus">plus</button>
+  <button id="minus">minus</button>
+  
+  <div id="root"></div>
+</body>
+
+<script>
+  const domElements = {
+    plus: document.getElementById('plus'),
+    minus: document.getElementById('minus'),
+    root: document.getElementById('root')
+  }
+
+  function eleMaker (tagname, textValue) {
+    const newelement = document.createElement(tagname)
+    newelement.textContent = textValue
+    newelement.style.width = '100px'
+    newelement.style.border = '1px solid black'
+    root.appendChild(newelement)
+    
+  }
+
+  domElements.plus.addEventListener('click', function () {
+    let appendElement = eleMaker('div','동적요소 ')
+    domElements.root.appendChild(appendElement)
+  })
+
+
+  domElements.minus.addEventListener('click', function (){
+    if(domElements.root.firstElementChild !== null) {
+      let removeElement = domElements.root.firstElementChild;
+
+      domElements.root.removeChild(removeElement)
+    } else {
+      alert('삭제 안됨 ㅅㄱ ')
+    }
+  })
+  
+  </script>

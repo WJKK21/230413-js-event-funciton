@@ -1,0 +1,42 @@
+<body>
+  <button id="add">make</button>
+  <button id="render">render</button>
+  <div id="root"></div>
+</body>
+
+<script>
+  const addButton = document.getElementById('add')
+  const renderButton = document.getElementById('render')
+  let root = document.getElementById('root')
+
+  const tags = [];
+  let count = 0;
+
+  addButton.addEventListener('click', () => {
+    count++;
+    console.log('count 값 :', count)
+    console.log('배열의 값 :', tags.length)
+    const tag = document.createElement('div')
+    tag.style.width = '100px'
+    tag.style.height = '100px'
+    tag.style.backgroundColor = 'tomato'
+    tag.textContent = count + '번째 태그'
+    tags.push(tag)
+
+    console.log(tags)     
+    for (let i = 0; i < tags.length; i++) {
+      root.appendChild(tags[i]);
+}
+  })
+/*   renderButton.addEventListener('click', () => {
+  for (let tag of tags) {
+    root.appendChild(tag)
+  }
+})
+ */
+
+  renderButton.addEventListener('click', () => {
+  
+  });
+
+</script>

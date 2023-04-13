@@ -1,0 +1,29 @@
+<body>
+  <button id="add">make</button>
+  <button id="render">render</button>
+  <div id="root"></div>
+</body>
+
+<script>
+  const addButton = document.getElementById('add')
+  const renderButton = document.getElementById('render')
+  let root = document.getElementById('root')
+
+  let tag = []
+  let count = 0
+
+  addButton.addEventListener('click', () => {
+    let ele = document.createElement('div')
+    count++
+    ele.textContent = count + ' 번째 태그'
+    ele.style.width = '100px'
+    ele.style.height = '100px'
+    ele.style.border = '1px solid black'
+
+    tag.push(ele)
+    for (let i = 0; i<tag.length; i++) {
+      root.appendChild(tag[i])
+    }
+  })
+
+  </script>

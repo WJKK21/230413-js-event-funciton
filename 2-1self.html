@@ -1,0 +1,42 @@
+<body>
+
+  <button id="plus">plus</button>
+  <button id="minus">minus</button>
+
+  <div id="root"></div>
+
+</body>
+
+<script>
+
+  let ele = {
+    plus: document.getElementById('plus'),
+    minus: document.getElementById('minus'),
+    root: document.getElementById('root')    
+  }
+
+  function elem (tagname,textValue) {
+    let maker = document.createElement(tagname)
+    maker.textContent = textValue
+    maker.style.width = '100px'
+    maker.style.height = '100px'
+    maker.style.border = '1px solid tomato'
+
+    return maker
+  }
+
+
+  ele.plus.addEventListener('click', function () {
+    ele.root.appendChild(elem('div', '고기'))
+  })
+
+  ele.minus.addEventListener('click', function () {
+    if (ele.root.firstElementChild === null) {
+    alert ('없음')
+    } else {   
+      let removeEle = ele.root.firstElementChild
+      ele.root.removeChild(removeEle)
+    }
+  })
+
+</script>
